@@ -11,7 +11,7 @@ import storage
 # The pin name should match our wiring.
 spi = busio.SPI(board.SCK, MOSI=board.MOSI, MISO=board.MISO)
 # This is the chip select line on the M0 board...
-cs = digitalio.DigitalInOut(board.SPI)
+cs = digitalio.DigitalInOut(board.D10)
 
 # This creates the microSD card object and the filesystem object:
 sdcard = adafruit_sdcard.SDCard(spi, cs)
